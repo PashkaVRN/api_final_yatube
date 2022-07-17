@@ -2,14 +2,15 @@
 
 Позволяет взаимодействовать с блогом Yatube при помощи REST API. Весь функционал доступен. 
 Документация к API доступна по адресу http://127.0.0.1:8000/redoc/.
+![This is an image](https://i.ytimg.com/vi/5YJ_dlM1ibc/maxresdefault.jpg)
 
 ## Инструкции по установке
-- Клонируйте репозиторий:
+***- Клонируйте репозиторий:***
 ```
 git clone git@github.com:PashkaVRN/api_final_yatube.git
 ```
 
-- Установите и активируйте виртуальное окружение:
+***- Установите и активируйте виртуальное окружение:***
 - для MacOS
 ```
 python3 -m venv venv
@@ -21,20 +22,21 @@ source venv/bin/activate
 source venv/Scripts/activate
 ```
 
-- Установите зависимости из файла requirements.txt:
+***- Установите зависимости из файла requirements.txt:***
 ```
 pip install -r requirements.txt
 ```
 
-- Примените миграции:
+***- Примените миграции:***
 ```
 python manage.py migrate
 ```
 
-- В папке с файлом manage.py выполните команду:
+***- В папке с файлом manage.py выполните команду:***
 ```python manage.py runserver```
 
 ## Примеры
+![This is an image](https://i.imgur.com/q3PJ8vS.png)
 > GET Получение публикаций api/v1/posts/
 ```200:```
 
