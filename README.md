@@ -30,7 +30,7 @@
 ``` 
 ***Технологии:***
 ``` 
-• Django 2.2.16
+• Django 2.2.7
 • Python 3.9
 • Djangorestframework 3.12.4
 ``` 
