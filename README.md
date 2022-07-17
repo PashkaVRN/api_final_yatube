@@ -1,9 +1,6 @@
 # api_final_yatube является инструментом для взаимодействия с сайтом Yatube через API.
 
-<<<<<<< HEAD
-=======
 ![This is an image](https://i.ytimg.com/vi/5YJ_dlM1ibc/maxresdefault.jpg)
->>>>>>> 78f9c4a755db1de4f18f21f56a45c61aa107c2fd
 ## Настройка и запуск:
 
 ***1)Клонируем репозиторий:***
@@ -71,8 +68,4 @@ Response:
 }
 ``` 
 Более подробное описание API можно получить по адресу:
-<<<<<<< HEAD
 http://localhost:8000/redoc/
-=======
-http://localhost:8000/redoc/
->>>>>>> 78f9c4a755db1de4f18f21f56a45c61aa107c2fd
