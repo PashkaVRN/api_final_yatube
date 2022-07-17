@@ -1,6 +1,5 @@
 # api_final_yatube является инструментом для взаимодействия с сайтом Yatube через API.
 
-![This is an image](https://i.ytimg.com/vi/5YJ_dlM1ibc/maxresdefault.jpg)
 ## Настройка и запуск:
 
 ***1)Клонируем репозиторий:***
