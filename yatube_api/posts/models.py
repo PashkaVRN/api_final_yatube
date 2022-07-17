@@ -24,12 +24,12 @@ class Post(models.Model):
         Group, on_delete=models.SET_NULL, related_name='posts',
         blank=True, null=True)
 
-    def __str__(self):
-        return self.text[:30]
-
     class Meta:
-        verbose_name = "Пост"
-        verbose_name_plural = "Посты"
+        ordering = ('pub_date'),
+        verbose_name_plural = 'Посты'
+
+    def __str__(self):
+        return self.text
 
 
 class Comment(models.Model):
@@ -59,11 +59,11 @@ class Follow(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                name='exclude a new subscription when it is valid',
                 fields=['user', 'following'],
+                name='subscription_is_not_valid',
             ),
             models.CheckConstraint(
-                name="disable subscribe to yourself",
+                name='user_not_equal_author',
                 check=~models.Q(user=models.F("following")),
             )
         ]
