@@ -1,71 +1,97 @@
-# api_final_yatube является инструментом для взаимодействия с сайтом Yatube через API.
+# API для соцсети Yatube
 
-![This is an image](https://i.ytimg.com/vi/5YJ_dlM1ibc/maxresdefault.jpg)
-## Настройка и запуск:
+Позволяет взаимодействовать с блогом Yatube при помощи REST API. Весь функционал доступен. 
+Документация к API доступна по адресу http://127.0.0.1:8000/redoc/.
 
-***1)Клонируем репозиторий:***
-``` 
-• git clone git@github.com:PashkaVRN/api_final_yatube.git
-``` 
+## Инструкции по установке
+Клонируйте репозиторий:
+```git clone git@github.com:DostovaK/api_final_yatube.git```
 
-***2)Создаём и активируем виртуальное окружение:***
-``` 
-• python -m venv venv
-• source venv/Scripts/activate
-``` 
+Установите и активируйте виртуальное окружение:
+- для MacOS
+```python3 -m venv venv```
+```source venv/bin/activate```
+- для Windows
+```python -m venv venv```
+```source venv/Scripts/activate```
 
-***3)Устанавливаем зависимости:***
-``` 
-• pip install -r requirements.txt
-``` 
+Установите зависимости из файла requirements.txt:
+```python -m pip install --upgrade pip```
+```pip install -r requirements.txt```
 
-***4)Создаём и применяем миграции:***
-``` 
-• python manage.py makemigrations
-• python manage.py migrate
-``` 
-***5)Запускаем DEV сервера:***
-``` 
-• python manage.py runserver
-``` 
-***Технологии:***
-``` 
-• Django 2.2.7
-• Python 3.9
-• Djangorestframework 3.12.4
-``` 
-## Примеры запросов/ответов:
-***GET /api/v1/posts/***
-``` 
-Response:
+Примените миграции:
+```python manage.py migrate```
+
+В папке с файлом manage.py выполните команду:
+```python manage.py runserver```
+
+## Примеры
+> GET Получение публикаций api/v1/posts/
+```200:```
+
+```sh
 {
-    "id": 0,
-    "author": "alex",
-    "text": "text_post",
-    "pub_date": "2022-04-12T15:03:22Z",
-    "image": "image",
-    "group": 0
+  "count": 123,
+  "next": "http://api.example.org/accounts/?offset=400&limit=100",
+  "previous": "http://api.example.org/accounts/?offset=200&limit=100",
+  "results": [
+    {
+      "id": 0,
+      "author": "string",
+      "text": "string",
+      "pub_date": "2021-10-14T20:41:29.648Z",
+      "image": "string",
+      "group": 0
+    }
+  ]
 }
-``` 
-***POST /api/v1/posts/***
-``` 
-Request:
+```
+
+> POST Создание публикации api/v1/posts/
+```200:```
+
+```sh
 {
-    "text": "some_text",
-    "image": "pic",
-    "group": 1
+  "text": "string",
+  "image": "string",
+  "group": 0
 }
-``` 
-``` 
-Response:
+```
+
+> PATCH Частичное обновление публикации api/v1/posts/{id}/
+```200:```
+
+```sh
 {
-    "id": 0,
-    "author": "username",
-    "text": "some_text",
-    "pub_date": "2022-04-12T15:17:10Z",
-    "image": "pic",
-    "group": 1
+  "text": "string",
+  "image": "string",
+  "group": 0
 }
-``` 
-Более подробное описание API можно получить по адресу:
-http://localhost:8000/redoc/
+```
+
+```401:```
+
+```sh
+{
+  "detail": "Учетные данные не были предоставлены."
+}
+```
+
+```403:```
+
+```sh
+{
+  "detail": "У вас недостаточно прав для выполнения данного действия."
+}
+```
+
+```404:```
+
+```sh
+{
+  "detail": "Страница не найдена."
+}
+```
+
+## License
+BSD 3
