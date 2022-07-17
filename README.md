@@ -4,25 +4,34 @@
 Документация к API доступна по адресу http://127.0.0.1:8000/redoc/.
 
 ## Инструкции по установке
-Клонируйте репозиторий:
-```git clone git@github.com:PashkaVRN/api_final_yatube.git```
+- Клонируйте репозиторий:
+```
+git clone git@github.com:PashkaVRN/api_final_yatube.git
+```
 
-Установите и активируйте виртуальное окружение:
+- Установите и активируйте виртуальное окружение:
 - для MacOS
-```python3 -m venv venv```
-```source venv/bin/activate```
+```
+python3 -m venv venv
+```
 - для Windows
-```python -m venv venv```
-```source venv/Scripts/activate```
+```
+python -m venv venv
+source venv/bin/activate
+source venv/Scripts/activate
+```
 
-Установите зависимости из файла requirements.txt:
-```python -m pip install --upgrade pip```
-```pip install -r requirements.txt```
+- Установите зависимости из файла requirements.txt:
+```
+pip install -r requirements.txt
+```
 
-Примените миграции:
-```python manage.py migrate```
+- Примените миграции:
+```
+python manage.py migrate
+```
 
-В папке с файлом manage.py выполните команду:
+- В папке с файлом manage.py выполните команду:
 ```python manage.py runserver```
 
 ## Примеры
