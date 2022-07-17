@@ -105,6 +105,3 @@ python manage.py runserver
   "detail": "Страница не найдена."
 }
 ```
-
-## License
-BSD 3
