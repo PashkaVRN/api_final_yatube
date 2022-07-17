@@ -33,7 +33,9 @@ python manage.py migrate
 ```
 
 ***- В папке с файлом manage.py выполните команду:***
-```python manage.py runserver```
+```
+python manage.py runserver
+```
 
 ## Примеры
 ![This is an image](https://i.imgur.com/q3PJ8vS.png)
