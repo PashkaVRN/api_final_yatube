@@ -25,7 +25,11 @@ class Post(models.Model):
         blank=True, null=True)
 
     def __str__(self):
-        return self.text
+        return self.text[:30]
+
+    class Meta:
+        verbose_name = "Пост"
+        verbose_name_plural = "Посты"
 
 
 class Comment(models.Model):
@@ -51,3 +55,15 @@ class Follow(models.Model):
         related_name='following',
         verbose_name="На кого подписались",
     )
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                name='exclude a new subscription when it is valid',
+                fields=['user', 'following'],
+            ),
+            models.CheckConstraint(
+                name="disable subscribe to yourself",
+                check=~models.Q(user=models.F("following")),
+            )
+        ]
