@@ -5,7 +5,7 @@
 
 ## Инструкции по установке
 Клонируйте репозиторий:
-```git clone git@github.com:DostovaK/api_final_yatube.git```
+```git clone git@github.com:PashkaVRN/api_final_yatube.git```
 
 Установите и активируйте виртуальное окружение:
 - для MacOS
